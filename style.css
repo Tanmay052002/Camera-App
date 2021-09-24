@@ -1,0 +1,119 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
+
+.video-container{
+    height:100vh;
+    width:100vw;
+    overflow: hidden;
+    background-color: black;
+}
+video{
+    height: 100%;
+    width: 100%;
+}
+
+#record,#capture{
+    position: fixed;
+    right: 2rem;
+    height: 4rem;
+    width: 4rem;
+    border:none;
+    border-radius: 50%;
+    background-color: black;
+    border: 5px solid white;
+    /* so that when filterDiv is appended then these button comes above the appended div and so that it can be clicked */
+    z-index:1;
+    cursor: pointer;
+}
+#record{
+    top:40vh;
+}
+#capture{
+    top:50vh;
+}
+#record div,#capture div{
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    margin: auto;
+}
+#record div{
+    background-color: red;
+}
+#capture div{
+    background-color: white;
+}
+.capture-animation{
+    animation: inOut 0.5s;
+}
+.record-animation{
+    animation: inOut 1s infinite;
+}
+@keyframes inOut{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+.filter-container{
+    background-color:red;
+    width: 5rem;
+    height: 25rem;
+    position: fixed;
+    top: calc( (100vh - 25rem)/2 );
+    left: 2rem;
+    /* so that when filterDiv is appended then these button comes above the appended div and so that it can be clicked */
+    z-index:1;
+}
+.filters{
+    height: calc(25rem / 6);
+    width: 100%;
+    border:2px solid white;
+    background: url(img.jpg);
+    background-size: cover;
+    background-blend-mode: soft-light;                
+}
+.zoom-in-out-container{
+    background-color: #2f3640;
+    width: 4rem;
+    height: 10rem;
+    position: fixed;
+    top: 5rem;
+    right: 2rem;
+    /* so that when filterDiv is appended then these button comes above the appended div and so that it can be clicked */
+    z-index:1;
+}
+.zoom-in-out-container div{
+    width:100%;
+    height:50%;
+    color:white;
+    font-size: 3.5rem;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+}
+
+.filter-div{
+    height:100vh;
+    width:100vw;
+    position:fixed;
+    top:0;
+}
+#gallery{
+    height:5rem;
+    width:5rem;
+    position:fixed;
+    right:2rem;
+    bottom:5rem;
+    z-index: 1;
+    cursor: pointer;
+}

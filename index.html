@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camera App</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+</head>
+<body>
+    <!-- video will autoplay with controls like fullScreen -->
+    <div class="video-container">
+        <video autoplay style="transform: scale(1);"></video>
+    </div>
+    <div class="filter-container">
+        <div class="filters" style="background-color: #1289a74b;"></div>
+        <div class="filters" style="background-color: #a4cb385d;"></div>
+        <div class="filters" style="background-color: #ea202741;"></div>
+        <div class="filters" style="background-color: #1b146444;"></div>
+        <div class="filters" style="background-color: #dfe4ea69;"></div>
+        <div class="filters"></div>
+    </div>
+    <div class="zoom-in-out-container">
+        <div class="zoom-in">+</div>
+        <div class="zoom-out">-</div>
+    </div>
+    <!-- <span class="material-icons">
+        collections
+    </span> -->
+    <!-- // for recording video -->
+    <button id="record">
+        <div></div>
+    </button>
+    <!-- for capturing image -->
+    <button id="capture">
+        <div></div>
+    </button>
+
+    <button id="gallery">Gallery</button>
+
+    <!-- <audio autoplay controls></audio> -->
+    <script src="dbScript.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
